@@ -1,0 +1,2 @@
+GET http://localhost:5000/api/getValidarDocumentoPdf/201500349500121700020220527093103.pdf
+authorization: eyJhbGciOiJIUzI1NiJ9.c3VwcmVtYQ.cpUyTYcgm8ixIVDTLe-Fua0RLkyUKg8yy2IkAOfKi2I
