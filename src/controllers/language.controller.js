@@ -2,12 +2,14 @@ import PromiseFtp from "promise-ftp";
 import config from "./../config.js";
 import jwt from "jsonwebtoken";
 import { scriptBase64 as pdfNoEncontrado } from "../utils/commons.js";
+import { methods as decode } from "../utils/decodeNameFile.js";
 
 //CONTROLLER INGRESOS
 const getValidarDocumentoPdf = async (req, res, next) => {
   try {
     const { namePdf } = req.params;
-    if (namePdf.length != 0) {
+    if (namePdf.length != 0 && namePdf.length === 24) {
+      const nombreDocumentoPDF = decode.desencriptarCaracter(namePdf);
       const ftp = new PromiseFtp();
       await ftp
         .connect({
@@ -17,7 +19,7 @@ const getValidarDocumentoPdf = async (req, res, next) => {
           autoReconnect: true,
         })
         .then(function () {
-          return ftp.get(namePdf);
+          return ftp.get(nombreDocumentoPDF);
         })
         .then(function (stream) {
           const bufs = [];
