@@ -3,6 +3,12 @@ import { methods as languageController } from "../controllers/language.controlle
 
 const router = Router();
 
+//ROUTER LOGIN SERVICE API
+router.post(
+    "/api/getLoginServiceApi",
+    languageController.getLoginServiceApi
+);
+
 //ROUTER BASE64-PDF
 router.get(
     "/api/getValidarDocumentoPdf/:namePdf",

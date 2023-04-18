@@ -1,2 +1,13 @@
-GET http://localhost:5000/api/getValidarDocumentoPdf/102YMI06YNBNU091JOIND000
-authorization: eyJhbGciOiJIUzI1NiJ9.c3VwcmVtYQ.cpUyTYcgm8ixIVDTLe-Fua0RLkyUKg8yy2IkAOfKi2I
+POST http://localhost:5000/api/getLoginServiceApi HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "123456",
+    "ip_public": "172.22.220.32"
+}
+
+###
+
+GET http://localhost:5000/api/getValidarDocumentoPdf/102YMI06YNBNU091JOIND000 HTTP/1.1
+Cookie: google_cookie_access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODE4NDE5ODM2MzUsImRhdGEiOnsiaXBfcHVibGljIjoiMTcyLjIyLjIyMC4zMiJ9LCJpYXQiOjE2ODE4MzgzODN9.gReaaMVuPwR2vp5SSim_8GzCrFVpI7ZsZmaPMFxeO44; Path=/; HttpOnly; Secure; SameSite=Strict

@@ -12,6 +12,7 @@
   "author": "Jose Luis Carihuasairo Rayo",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
     "expeditious-engine-redis": "^0.1.2",
